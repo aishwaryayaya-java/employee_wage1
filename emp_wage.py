@@ -6,9 +6,13 @@ def check_attendance(attendance):
         print('employee is absent')
         dailywage=0
         print(dailywage)
-    if attendance==1:
+    elif attendance==1:
         print('employee is present')
-        dailywage=20*8
+        job=input("Enter part or full time :").lower()
+        if(job=="part"):
+            dailywage=20*4
+        if(job=="full"):
+            dailywage=20*8
         print(dailywage)
 num=random.randint(0,1)
 check_attendance(num)
